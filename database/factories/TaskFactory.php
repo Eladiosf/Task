@@ -16,8 +16,11 @@ class TaskFactory extends Factory
      */
     public function definition(): array
     {
+        // Le decimos a la Factoria que vamos a crear datos falsos
         return [
-            //
+            'name'=>$this->faker->sentence,
+            'description'=> $this->faker->paragraph,
+            'completed'=> $this->faker->boolean,
         ];
     }
 }
